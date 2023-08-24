@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>工作室报名</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        section {
+            padding: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        label {
+            display: inline-block;
+            width: 80px;
+        }
+        input[type="submit"] {
+            margin-left: 80px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>工作室报名</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+    </nav>
+    <section>
+        <form id="register-form">
+            <label for="username">用户名:</label>
+            <input type="text" id="username" name="username"><br><br>
+            <label for="password">密码:</label>
+            <input type="password" id="password" name="password"><br><br>
+            <input type="submit" value="注册">
+        </form>
+        <form id="login-form">
+            <label for="username">用户名:</label>
+            <input type="text" id="username" name="username"><br><br>
+            <label for="password">密码:</label>
+            <input type="password" id="password" name="password"><br><br>
+            <input type="submit" value="登录">
+        </form>
+        <form id="apply-form">
+            <label for="studio">工作室:</label>
+            <select id="studio" name="studio">
+                <option value="">请选择</option>
+                <option value="1">工作室1</option>
+                <option value="2">工作室2</option>
+                <option value="3">工作室3</option>
+            </select><br><br>
+            <input type="submit" value="报名">
+        </form>
+
+    </section>
+
+    <!-- 这里是一些JavaScript代码，用于处理表单提交和与后端服务器通信 -->
+    <script>
+
+      // 处理注册表单提交
+      document.getElementById("register-form").addEventListener("submit", function(event) {
+          event.preventDefault();
+          var username = document.getElementById("username").value;
+          var password = document.getElementById("password").value;
+
+          // 检查用户名和密码是否符合要求
+          if (username.length === 0) {
+              alert("用户名不能为空");
+              return false;
+          }
+          if (password.length === 0) {
+              alert("密码不能为空");
+              return false;
+          }
+
+          // 然后将数据发送到后端服务器进行处理
+          // ...
+      });
+
+      // 处理登录表单提交
+      document.getElementById("login-form").addEventListener("submit", function(event) {
+          event.preventDefault();
+          var username = document.getElementById("username").value;
+          var password = document.getElementById("password").value;
+
+          // 检查用户名和密码是否符合要求
+          if (username.length === 0) {
+              alert("用户名不能为空");
+              return false;
+          }
+          if (password.length === 0) {
+              alert("密码不能为空");
+              return false;
+          }
+
+          // 然后将数据发送到后端服务器进行处理
+          // ...
+      });
+
+      // 处理报名表单提交
+      document.getElementById("apply-form").addEventListener("submit", function(event) {
+          event.preventDefault();
+          var studio = document.getElementById("studio").value;
+
+          // 这里可以添加一些验证代码，例如检查用户是否已经登录
+          // 然后将数据发送到后端服务器进行处理
+          // ...
+      });
+
+    </script>
+
+</body>
+</html>
